@@ -1,0 +1,21 @@
+<div class="mt-4">
+    <div class="row">
+        {{#each blog}}
+        <div class="col-sm-6 col-lg-4">
+            <div class="card">
+                <a href="/blogs/{{this.slug}}">
+                    <img class="card-img-top" src="{{this.img}}" alt="image">   
+                </a>
+                
+                <div class="card-body">
+                    <a href="/blogs/{{this.slug}}">
+                        <h5 class="card-title">{{this.title}}</h5>
+                    </a>
+                    <p class="card-text">{{this.body}}</p>
+                    <a href="#" class="btn btn-primary">Xem thêm</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

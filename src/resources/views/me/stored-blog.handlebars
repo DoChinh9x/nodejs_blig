@@ -1,0 +1,29 @@
+<div class="mt-4">
+    <h3>Bài đăng của tôi</h3>
+    <table class="table">
+        <thead>
+            <tr>
+            <th scope="col">#</th>
+            <th scope="col">Tiêu đề</th>
+            <th scope="col">Nội dung</th>
+            <th scope="col">Thời gian</th>
+            </tr>
+        </thead>
+        <tbody>
+        {{#each blog}}
+            <tr>
+            <th scope="row">{{@index}}</th>
+            <td>{{this.title}}</td>
+            <td>{{this.body}}</td>
+            <td>{{this.date}}</td>
+            <td>
+                <a href="/blogs/{{this._id}}/edit" class="btn btn-link">Sửa</a>
+                <a href="" class="btn btn-link">Xóa</a>
+
+            </td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+
+</div>
